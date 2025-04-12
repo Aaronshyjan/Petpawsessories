@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>petpawsessories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+      height: 100%;
+    }
+
+    body {
+      background: url('bgs.jpg') no-repeat center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .logo {
+  width: 140px;
+}
+
+header .nav-wrapper {
+  flex: 1;
+}
+
+header ul li a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  color: #2fbd3d;
+}
+
+header .login-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+    .services {
+      position: relative;
+      width: 100%;
+    }
+
+    .circle {
+      position: absolute;
+      top:15%;
+      transform: translateY(-50%);
+      height: 55vh;
+      width: 55vh;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .circle h3 {
+      font-size: 1.6rem;
+      margin: 0.5rem 0;
+    }
+
+    .circle p {
+      font-size: 1rem;
+      max-width: 220px;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #fff;
+      color: #0a4428;
+      font-weight: 600;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #0a4428;
+      color: #fff;
+    }
+
+    .circle1 {
+      background: #0a4428;
+      width: 20vh;
+      height: 75vh;
+      left: 0;
+      top: 5%;
+      transform: translateY(-50%);
+      z-index: 10;
+      border-top-right-radius: 100vh;
+      border-bottom-right-radius: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .circle1 h3 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .circle2 { background: linear-gradient(135deg, #107243, #0d5a36); left: calc(10vw); z-index: 9; }
+    .circle3 { background: linear-gradient(135deg, #288056, #1c6241); left: calc(23vw); z-index: 8; }
+    .circle4 { background: linear-gradient(135deg, #408e69, #2a6c50); left: calc(36vw); z-index: 7; }
+    .circle5 { background: linear-gradient(135deg, #58ac82, #3d8c65); left: calc(49vw); z-index: 6; }
+
+    .circle2, .circle3, .circle4, .circle5 {
+      align-items: flex-end;
+      text-align: right;
+      padding-right: 3rem;
+    }
+
+    .circle2:hover,
+    .circle3:hover,
+    .circle4:hover,
+    .circle5:hover {
+      transform: translate(30px, -50%) scale(1.07);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+      z-index: 20;
+    }
+    .service-circles {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 0; /* Fixed white gap below circles */
+}
+
+.testimonials {
+  margin-top: -9rem; /* Bringing it closer to the service circles */
+  padding: 4rem 2rem;
+  background: #024e32;
+  text-align: center;
+}
+
+    .testimonials h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #caffcf;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: scale(1.05);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: #e0ffe3;
+    }
+
+    .testimonial p.rating {
+      font-style: normal;
+      font-size: 1.2rem;
+      color: #ffd700;
+      margin-top: 0.5rem;
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #a8f7b4;
+    }
+
+    @media screen and (max-width: 768px) {
+      .circle {
+        width: 70vw;
+        height: 70vw;
+        left: unset !important;
+        position: static;
+        margin: 1rem auto;
+        transform: none;
+      }
+
+      .circle1 {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding: 1rem;
+        position: static;
+        transform: none;
+      }
+
+      .circle1 h3 {
+        writing-mode: horizontal-tb;
+        transform: none;
+      }
+
+      .testimonials {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#"><img src="lodo.png" class="logo" alt="Logo"></a>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="login.html" class="login-icon">
+      <img src="user.png" alt="Login Icon">
+    </a>
+  </header>
+
+  <section class="services">
+    <div class="circle circle1" data-aos="fade-right">
+      <h3>Our Services</h3>
+    </div>
+
+    <div class="service-circles">
+      <div class="circle circle2" data-aos="fade-up" data-aos-delay="100">
+        <div class="circle-content">
+          <h3>Grooming</h3>
+          <p>Professional grooming service for your furry friends.</p>
+          <a href="apo.html" class="book-btn">Book Now →</a>
+        </div>
+      </div>
+      <div class="circle circle3" data-aos="fade-up" data-aos-delay="200">
+        <div class="circle-content">
+          <h3>Wellbeing</h3>
+          <p>Reliable pet walking service to keep your pet active.</p>
+          <a href="apo.html" class="book-btn">Book Now →</a>
+        </div>
+      </div>
+      <div class="circle circle4" data-aos="fade-up" data-aos-delay="300">
+        <div class="circle-content">
+          <h3>Training</h3>
+          <p>Expert pet training to help your pet learn new skills.</p>
+          <a href="apo.html" class="book-btn">Book Now →</a>
+        </div>
+      </div>
+      <div class="circle circle5" data-aos="fade-up" data-aos-delay="400">
+        <div class="circle-content">
+          <h3>Mating</h3>
+          <p>Find suitable mates for your pets and ensure successful breeding.</p>
+          <a href="apo.html" class="book-btn">Book Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>"The grooming service was top-notch. My dog looked so happy and fresh!"</p>
+        <p class="rating">⭐⭐⭐⭐⭐</p>
+        <span>- Maya K.</span>
+      </div>
+      <div class="testimonial">
+        <p>"Training sessions helped my puppy become more obedient and confident."</p>
+        <p class="rating">⭐⭐⭐⭐</p>
+        <span>- Rohan D.</span>
+      </div>
+      <div class="testimonial">
+        <p>"Highly recommend their wellbeing walks – my Labrador loves it!"</p>
+        <p class="rating">⭐⭐⭐⭐⭐</p>
+        <span>- Simran J.</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+   <iframe src="footer.html" width="100%" height="300px" frameborder="0"></iframe>
+</body>
+</html>

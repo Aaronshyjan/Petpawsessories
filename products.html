@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Products</title>
+    <link rel="stylesheet" href="products.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+        <a href="#"><img src="lodo.png" class="logo" alt="Logo"></a>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="products.html">PRODUCTS</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="login.html" class="login-icon">
+          <img src="user.png" alt="Login Icon">
+        </a>
+      </header>
+    
+    <main class="product-page-content">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cloth">Cloth</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="toys">Toys</button>
+        <button class="filter-btn" data-filter="medicine">Medicine</button>
+      </div>
+
+      <section class="category-section">
+        <section class="category-section" data-aos="fade-up" data-aos-duration="1000">
+
+        <h2>Cloth</h2>
+        <div class="category-container" data-category="cloth">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/51j-9tM-HmL.SX679.jpg"
+              alt="Winter Coat"
+            />
+            <div class="card-content">
+              <h3>Winter Coat</h3>
+              <p class="price">
+                <span class="original-price">₹1999</span>
+                <span class="discounted-price">₹1499</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity1">Qty:</label>
+                <select id="quantity1" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/615ir9vff-L.SX679.jpg"
+              alt="Rain Jacket"
+            />
+            <div class="card-content">
+              <h3>Rain Jacket</h3>
+              <p class="price">
+                <span class="original-price">₹1599</span>
+                <span class="discounted-price">₹1199</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity2">Qty:</label>
+                <select id="quantity2" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61V36kRMzHL.SX679.jpg"
+              alt="Party Dress"
+            />
+            <div class="card-content">
+              <h3>Party Dress</h3>
+              <p class="price">
+                <span class="original-price">₹1799</span>
+                <span class="discounted-price">₹1299</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity3">Qty:</label>
+                <select id="quantity3" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61Te1ygEN3L.SX679_PIbundle-4,TopRight,0,0_AA679SH20.jpg"
+              alt="Hoodie"
+            />
+            <div class="card-content">
+              <h3>Pet Hoodie</h3>
+              <p class="price">
+                <span class="original-price">₹1299</span>
+                <span class="discounted-price">₹999</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity4">Qty:</label>
+                <select id="quantity4" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/41ROAkLbc7L.SX300_SY300_QL70_FMwebp.jpg"
+              alt="T-Shirt"
+            />
+            <div class="card-content">
+              <h3>Pet T-Shirt</h3>
+              <p class="price">
+                <span class="original-price">₹899</span>
+                <span class="discounted-price">₹699</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity5">Qty:</label>
+                <select id="quantity5" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="category-section">
+        <section class="category-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Food</h2>
+        <div class="category-container" data-category="food">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/51zG+q309YL.SX679.jpg"
+              alt="Grain-Free Dog Food"
+            />
+            <div class="card-content">
+              <h3>Grain-Free Dog Food</h3>
+              <p class="price">
+                <span class="original-price">₹2499</span>
+                <span class="discounted-price">₹1999</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity6">Qty:</label>
+                <select id="quantity6" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/51qsWbOee1S.jpg"
+              alt="Wet Cat Food"
+            />
+            <div class="card-content">
+              <h3>Wet Cat Food</h3>
+              <p class="price">
+                <span class="original-price">₹1199</span>
+                <span class="discounted-price">₹899</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity7">Qty:</label>
+                <select id="quantity7" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61joWjXu4RL.SX679.jpg"
+              alt="Chicken Treats"
+            />
+            <div class="card-content">
+              <h3>Chicken Treats</h3>
+              <p class="price">
+                <span class="original-price">₹699</span>
+                <span class="discounted-price">₹499</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity8">Qty:</label>
+                <select id="quantity8" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/71s4KLUuEeL.SY879.jpg"
+              alt="Salmon Bites"
+            />
+            <div class="card-content">
+              <h3>Salmon Bites</h3>
+              <p class="price">
+                <span class="original-price">₹999</span>
+                <span class="discounted-price">₹749</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity9">Qty:</label>
+                <select id="quantity9" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61dp10EPjGL.SX679_PIbundle-5,TopRight,0,0_SX679SY807SH20.jpg"
+              alt="Milk Bones"
+            />
+            <div class="card-content">
+              <h3>Milk Bones</h3>
+              <p class="price">
+                <span class="original-price">₹799</span>
+                <span class="discounted-price">₹599</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity10">Qty:</label>
+                <select id="quantity10" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="category-section">
+        <section class="category-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Toys</h2>
+        <div class="category-container" data-category="toys">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/71vvzhH6iHL.SX679.jpg"
+              alt="Chew Bone Toy"
+            />
+            <div class="card-content">
+              <h3>Chew Bone Toy</h3>
+              <p class="price">
+                <span class="original-price">₹499</span>
+                <span class="discounted-price">₹349</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity11">Qty:</label>
+                <select id="quantity11" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/71Mcxxjse5L.SX679.jpg"
+              alt="Squeaky Ball"
+            />
+            <div class="card-content">
+              <h3>Squeaky Ball</h3>
+              <p class="price">
+                <span class="original-price">₹299</span>
+                <span class="discounted-price">₹199</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity12">Qty:</label>
+                <select id="quantity12" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61pL0+KZeuL.SX679.jpg"
+              alt="Rope Toy"
+            />
+            <div class="card-content">
+              <h3>Rope Tug Toy</h3>
+              <p class="price">
+                <span class="original-price">₹399</span>
+                <span class="discounted-price">₹279</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity13">Qty:</label>
+                <select id="quantity13" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61NpUUqIQ+L.SX679.jpg"
+              alt="Interactive Ball"
+            />
+            <div class="card-content">
+              <h3>Interactive Ball</h3>
+              <p class="price">
+                <span class="original-price">₹699</span>
+                <span class="discounted-price">₹499</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity14">Qty:</label>
+                <select id="quantity14" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61DUrZ8Lx0L.SX679.jpg"
+              alt="Plush Toy"
+            />
+            <div class="card-content">
+              <h3>Plush Dog Toy</h3>
+              <p class="price">
+                <span class="original-price">₹599</span>
+                <span class="discounted-price">₹449</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity15">Qty:</label>
+                <select id="quantity15" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="category-section">
+        <section class="category-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Medicine</h2>
+        <div class="category-container" data-category="medicine">
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61UvSMSuiWL.SX679.jpg"
+              alt="Deworming Tablets"
+            />
+            <div class="card-content">
+              <h3>Deworming Tablets</h3>
+              <p class="price">
+                <span class="original-price">₹699</span>
+                <span class="discounted-price">₹549</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity16">Qty:</label>
+                <select id="quantity16" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/61O54pkFicL.SX679.jpg"
+              alt="Flea & Tick Spray"
+            />
+            <div class="card-content">
+              <h3>Flea & Tick Spray</h3>
+              <p class="price">
+                <span class="original-price">₹899</span>
+                <span class="discounted-price">₹699</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity17">Qty:</label>
+                <select id="quantity17" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/51412GKspwL.SX679.jpg"
+              alt="Eye Drops"
+            />
+            <div class="card-content">
+              <h3>Pet Eye Drops</h3>
+              <p class="price">
+                <span class="original-price">₹499</span>
+                <span class="discounted-price">₹379</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity18">Qty:</label>
+                <select id="quantity18" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://m.media-amazon.com/images/I/51ZO7Xmz9xL.SX679.jpg"
+              alt="Multivitamins"
+            />
+            <div class="card-content">
+              <h3>Multivitamin Syrup</h3>
+              <p class="price">
+                <span class="original-price">₹899</span>
+                <span class="discounted-price">₹649</span>
+              </p>
+              <div class="quantity-selector">
+                <label for="quantity19">Qty:</label>
+                <select id="quantity19" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <button class="add-to-basket-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Basket
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="proscript.js" defer></script>
+    
+   <iframe src="footer.html" width="100%" height="300px" frameborder="0"></iframe>
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  </body>
+</html>
+HTML

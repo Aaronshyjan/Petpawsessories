@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petpawsessories</title>
+  <style>
+    header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+    header .logo {
+      width: 140px;
+    }
+
+    header ul li a {
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+      padding: 5px;
+    }
+
+    header ul li a:hover,
+    header ul li a.active {
+      color: #2fbd3d;
+    }
+
+    header .login-icon img {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) invert(1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('bga.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+    }
+
+    .about-container {
+        height: 70vh; /* Moved even more up */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: -20px; /* Pulls it slightly higher */
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 2s ease-in-out;
+    }
+
+    .about-container h1 {
+      font-size: 64px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #0f7906;
+    }
+
+    .about-container p {
+      font-size: 25px;
+      width: 90%;
+      max-width: 1200px;
+      color: #0d810d;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#"><img src="lodo.png" class="logo" alt="Logo"></a>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="login.html" class="login-icon">
+      <img src="user.png" alt="Login Icon">
+    </a>
+  </header>
+
+  <div class="about-container">
+    <h1>About Us</h1>
+    <p>
+      At <strong>PetPawsessories</strong>, we believe every pet deserves to feel loved, pampered, and stylish! Our passion for animals drives us to create and curate the best accessories, from cozy collars and playful toys to eco-friendly grooming essentials.
+      Whether your furry friend is a diva, a goofball, or a cuddle bug, we’ve got something just for them. We combine quality, comfort, and cuteness into every product, because your pet isn’t just a pet—they’re family.
+      Join the PetPawsessories family and treat your pet to the care, comfort, and style they deserve!
+    </p>
+  </div>
+  <iframe src="footer.html" width="100%" height="300px" frameborder="0"></iframe>
+</body>
+</html>

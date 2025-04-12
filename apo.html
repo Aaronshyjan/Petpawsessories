@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Petpawsessories</title>
+  <style>
+    header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .logo {
+  width: 140px;
+}
+
+header ul li a {
+  color: #ffffff; /* Soft green */
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  color: #2fbd3d; /* Brighter green on hover/active */
+}
+
+
+header .login-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bga.jpg') no-repeat center center ;
+      background-size: cover;
+      margin:0;
+      padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+  margin: 70px auto 50px; /* Reduced top margin to bring content up */
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2f6627;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #2c562c;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #a9e6a9;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #e8ffe8;
+      color: #2c562c;
+    }
+
+    input[type="text"]::placeholder {
+      color: #81c781;
+    }
+
+    .services {
+      margin-bottom: 20px;
+    }
+
+    .services label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .services input {
+      margin-right: 10px;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .slot {
+      padding: 12px;
+      background-color: #d4f5d4;
+      border: 2px solid #4caf50;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+      color: #2c562c;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .slot:hover {
+      background-color: #b4eab4;
+    }
+
+    .slot.selected {
+      background-color: #81d881;
+      color: white;
+      border-color: #2e7d32;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0, 128, 0, 0.25);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3d9b3d;
+    }
+
+    .confirmation {
+      display: none;
+      margin-top: 30px;
+      background-color: #e1ffe1;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #a9e6a9;
+      font-size: 16px;
+      color: #2c562c;
+      box-shadow: 0 0 8px rgba(0, 128, 0, 0.08);
+    }
+  </style>
+</head>
+<body>
+    
+    <header>
+        <a href="#"><img src="lodo.png" class="logo" alt="Logo"></a>
+      
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      
+        <a href="login.html" class="login-icon">
+            <img src="user.png" alt="Login Icon">
+        </a>
+      </header>
+  <div class="container">
+    <h2>Book a Slot for Your Pet</h2>
+    <form id="bookingForm">
+      <label for="ownerName">Your Name:</label>
+      <input type="text" id="ownerName" name="ownerName" placeholder="Enter your name" required />
+
+      <label for="petType">Select your pet:</label>
+      <select id="petType" name="petType" required>
+        <option value="">-- Choose Pet --</option>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Bird">Bird</option>
+        <option value="Rabbit">Rabbit</option>
+      </select>
+
+      <label>Select Services:</label>
+      <div class="services">
+        <label><input type="checkbox" name="service" value="Grooming" /> Grooming</label>
+        <label><input type="checkbox" name="service" value="Wellbeing" /> Wellbeing</label>
+        <label><input type="checkbox" name="service" value="Training" /> Training</label>
+        <label><input type="checkbox" name="service" value="Mating" /> Mating</label>
+      </div>
+
+      <label>Select Time Slot:</label>
+      <div class="slots" id="slots">
+        <div class="slot">9:00 AM</div>
+        <div class="slot">10:30 AM</div>
+        <div class="slot">12:00 PM</div>
+        <div class="slot">2:00 PM</div>
+        <div class="slot">3:30 PM</div>
+        <div class="slot">5:00 PM</div>
+      </div>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <div class="confirmation" id="confirmationBox"></div>
+  </div>
+
+  <script>
+    const slots = document.querySelectorAll(".slot");
+    let selectedSlot = "";
+
+    slots.forEach(slot => {
+      slot.addEventListener("click", () => {
+        slots.forEach(s => s.classList.remove("selected"));
+        slot.classList.add("selected");
+        selectedSlot = slot.textContent;
+      });
+    });
+
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("ownerName").value.trim();
+      const pet = document.getElementById("petType").value;
+      const services = Array.from(document.querySelectorAll('input[name="service"]:checked')).map(input => input.value);
+
+      if (!selectedSlot) {
+        alert("Please select a time slot!");
+        return;
+      }
+
+      const confirmationBox = document.getElementById("confirmationBox");
+      confirmationBox.innerHTML = `
+        <h3>Booking Confirmed!</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Pet:</strong> ${pet}</p>
+        <p><strong>Services:</strong> ${services.join(", ") || 'None selected'}</p>
+        <p><strong>Time Slot:</strong> ${selectedSlot}</p>
+      `;
+      confirmationBox.style.display = "block";
+      
+    });
+  </script>
+</body>
+</html>
