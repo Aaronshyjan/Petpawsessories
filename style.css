@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,300;1,700&family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 * {
     margin: 0;
@@ -7,15 +7,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 section {
     position: relative;
     width: 100%;
-    min-width: 100vh;
-    padding: 100px;
+    min-height: 100vh;
+    padding: 100px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: #fff;
+    flex-direction: column;
 }
 
 header {
@@ -23,160 +28,108 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10px;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
+    background: transparent;
 }
 
 header .logo {
-    position: relative;
     max-width: 100px;
 }
 
-/* Move the navigation links slightly left */
 header ul {
     display: flex;
-    gap: 20px; /* Adjusted spacing */
+    gap: 25px;
     list-style: none;
-    position: relative;
-    left: 60px; /* Moves the links slightly to the left */
 }
 
-/* Apply professional font to navigation links */
 header ul li a {
-    display: inline-block;
     color: #333;
-    font-weight: 700;
-    margin-left: 40px;
+    font-weight: 600;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif; /* Professional font applied */
+    font-family: 'Open Sans', sans-serif;
     transition: color 0.3s ease;
 }
 
-/* Hover effect */
 header ul li a:hover {
-    color: #107143; /* Green theme */
+    color: #107143;
 }
 
-/* Adjust login icon position */
 .login-icon img {
     max-width: 25px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
-    position: relative;
-    right: 60px; /* Moved slightly left */
 }
 
-/* Hover effect for login icon */
 .login-icon img:hover {
     transform: scale(1.2);
 }
 
 .container {
-    position: relative;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding-top: 100px;
 }
 
-.container .text-box {
-    position: relative;
+.text-box {
     max-width: 600px;
+    padding: 20px;
 }
 
-.container .text-box h2 {
+.text-box h2 {
     color: #333;
-    font-size: 4em;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
-.container .text-box h2 span {
+.text-box h2 span {
     color: #107143;
-    font-size: 1.2em;
-    font-weight: 900;
+    font-size: 1.5em;
+    font-weight: 800;
 }
 
-.container .text-box p {
-    color: #333;
+.text-box p {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
-.container .text-box a {
+.learn-more-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 8px 20px;
+    padding: 10px 25px;
     background: #107143;
     color: #fff;
     border-radius: 40px;
     font-weight: 500;
-    letter-spacing: 1px;
     text-decoration: none;
+    transition: background 0.3s ease;
 }
 
-/* Move the dog image to the right */
-.container .img-box {
-    width: 1000px; /* Container width */
-    display: flex;
-    justify-content: flex-end; /* Keep image on the right */
-    padding-right: 50px; /* Adjust as needed */
-    margin-top: 50px;
+.learn-more-btn:hover {
+    background: #0a5c35;
 }
 
-.container .img-box img {
-    width: 1300px;
-    height: auto;
-    position: relative; /* Allows manual positioning */
-    left: 250px; /* Moves image right */
-}
-
-.thumb {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    display: flex;
-}
-
-.thumb li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    padding: 20px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.thumb li:hover {
-    transform: translateY(-15px);
-}
-
-.thumb li img {
-    max-width: 150px;
-    height: auto;
-}
-
-.social {
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
+.img-box {
+    width: 100%;
+    max-width: 600px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 20px;
 }
 
-.social li {
-    list-style: none;
-}
-
-.social li a {
-    display: inline-block;
-    margin: 5px 0;
-    transform: scale(0.6);
-    filter: invert(1);
+.img-box img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 .circle {
@@ -187,7 +140,38 @@ header ul li a:hover {
     height: 100%;
     background: #107143;
     clip-path: circle(600px at right 800px);
+    z-index: -1;
 }
 
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    header ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
 
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .text-box {
+        text-align: center;
+    }
+
+    .img-box img {
+        max-width: 100%;
+    }
+
+    .circle {
+        clip-path: circle(300px at center);
+    }
+}
